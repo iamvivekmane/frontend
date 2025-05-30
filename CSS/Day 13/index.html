@@ -1,11 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS position</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS variables</title>
+    <style>
+      :root {
+        --color: rgb(187, 131, 42);
+        --seccolor: rgb(212, 0, 255);
+        --defpad: 23px;
+        --defop: 0.2;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .nav {
+        background-color: var(--color);
+      }
+      .container {
+        background-color: cadetblue;
+        background-color: var(--seccolor);
+      }
+      ul {
+        display: flex;
+      }
+      ul li {
+        opacity: var(--defop);
+        list-style: none;
+        padding: var(--defpad);
+        border: 2px solid var(--seccolor);
+      }
+      ul li:first-child {
+        --color: red;
+        background-color: var(--color);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+    <div class="container">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe
+      dignissimos animi pariatur maiores quibusdam reiciendis temporibus vero
+      nobis qui, ab aut, incidunt, eaque rerum ipsam quae alias accusantium quam
+      sit consequatur aspernatur! Quos numquam, molestias culpa adipisci odio
+      quo veniam voluptas porro nisi accusantium aut minus nam voluptatibus,
+      error accusamus sunt deserunt, vel rerum.
+    </div>
+  </body>
 </html>
