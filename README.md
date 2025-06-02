@@ -6,5 +6,5 @@ Welcome to the **Web Development Learning Repository**! This project is dedicate
 
 The repository is organized into the following directories:
 
-- **HTML/**: Contains foundational HTML files covering various topics and exercises.
-- **CSS/**: Includes stylesheets and related resources to enhance the visual presentation of web pages.
+- **HTML**: Contains foundational HTML files covering various topics and exercises.
+- **CSS**: Includes stylesheets and related resources to enhance the visual presentation of web pages.
