@@ -19,11 +19,9 @@ if (age == 18) {
   console.log("You cannot drive");
 }
 
-let a = 10;
-
-let b = 8;
-
 //ternary operator
+let a = 10;
+let b = 8;
 let c = a > b ? a - b : b - a;
 
 // works like same
