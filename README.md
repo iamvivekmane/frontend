@@ -8,3 +8,4 @@ The repository is organized into the following directories:
 
 - **HTML**: Contains foundational HTML files covering various topics and exercises.
 - **CSS**: Includes stylesheets and related resources to enhance the visual presentation of web pages.
+- **JavaScript**: Currently started learning JavaScript.
