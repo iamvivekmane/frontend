@@ -1,8 +1,8 @@
 //Faulty calucaltor
 //It performs correct operation only 10% of the time
 
-let number1;
-let number2;
+let number1 = 92;
+let number2 = 9;
 
 function addition(number1, number2) {
   let random = Math.random();
