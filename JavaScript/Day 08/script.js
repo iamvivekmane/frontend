@@ -9,17 +9,3 @@ console.log(str);
 console.log(arr.join(" and "));
 
 console.log(arr.pop());
-
-//It pushes the element and return the length of the array
-console.log(arr.push(10));
-console.log(arr);
-
-console.log(arr.shift());
-console.log(arr.unshift("ronny"));
-console.log(arr);
-
-// delete arr[2];
-// console.log(arr);
-
-arr.splice(1, 2);
-console.log(arr);
