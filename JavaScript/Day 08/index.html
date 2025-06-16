@@ -3,9 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>JavaScript DOM</title>
   </head>
   <body>
-    <script src="script.js"></script>
+    <div class="container">
+      <div class="box"></div>
+    </div>
+    <script>
+      document.title = "JavaScript DOM";
+      console.log(document.title);
+      document.body.style.backgroundColor = "red";
+    </script>
   </body>
 </html>
