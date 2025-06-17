@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .body {
+        background-color: black;
+      }
+      .container {
+        margin: auto;
+        padding: 10px;
+        height: 100px;
+        width: 60%;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid black;
+      }
+      .thumbnail {
+        position: relative;
+        /* text-align: center; */
+        width: 170px;
+        display: inline;
+        float: left;
+      }
+      .thumbnail img {
+        padding-top: 3px;
+        border-radius: 10px;
+      }
+
+      .duration {
+        position: absolute;
+        bottom: 8px;
+        right: 9px;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.671);
+        color: white;
+        border-radius: 5px;
+        padding: 1px 3px;
+      }
+
+      .title {
+        margin: 9px;
+        display: inline-block;
+        top: 0;
+        font-size: large;
+        margin-bottom: 0px;
+      }
+
+      .desc {
+        display: inline-block;
+        top: 0;
+        /* border: 2px solid black; */
+        width: 700px;
+        height: 40px;
+        padding: 0px;
+      }
+
+      .desc ul {
+        margin: 0px;
+        padding: 0px;
+        margin-left: 10px;
+        height: 100px;
+      }
+      .desc li {
+        padding: 0px;
+        float: left;
+        margin: 10px;
+      }
+      #channel {
+        list-style-type: none;
+        padding: 0px;
+      }
+
+      .desc .elements {
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div></div>
+
+
+
+
+      <!-- <div class="thumbnail">
+        <img
+          id="thumbnail"
+          src="https://i.ytimg.com/vi/BGeDBfCIqas/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLDpdOoVMCl1Z3qDixA988oU8Cot0w"
+          alt=""
+        />
+        <div id="duration" class="duration">12:00</div>
+      </div>
+      <span id="title" class="title"
+        >Installing VS Code & How Websites Work | Sigma web development
+        course</span
+      >
+      <div class="desc">
+        <ul>
+          <li id="channel">hello</li>
+          <li id="views">220k</li>
+          <li id="months_old">2 months ago</li>
+        </ul>
+      </div>
+    </div> -->
+
+    <script>
+      const cardContainer = document.getElementById("container");
+      
+      function createCard(title, channel, views, months_old, duration, thumbnail) 
+      {
+        const card  = document.createElement("div");
+        card.classList.add("card");
+
+        
+
+
+  let title_ = document.getElementById("title");
+  title_.innerText = title;
+
+  let channel_ = document.getElementById("channel");
+  channel_.innerText = channel;
+
+  let views_ = document.getElementById("views");
+  views_.innerText = views;
+
+  let months_old_ = document.getElementById("months_old");
+  months_old_.innerText = months_old;
+
+  let duration_ = document.getElementById("duration");
+  duration_.innerText = duration;
+
+  let thumbnail_ = document.getElementById("thumbnail");
+  thumbnail_.src = thumbnail;
+}
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Cards</title>
+    <style>
+      .card {
+        border: 1px solid #ddd;
+        padding: 20px;
+        margin: 10px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="card-container"></div>
+
+    <script>
+      const cardContainer = document.getElementById("card-container");
+
+      function createCard(title, content) {
+        const card = document.createElement("div");
+        card.classList.add("card");
+
+        const cardTitle = document.createElement("h2");
+        cardTitle.textContent = title;
+
+        const cardContent = document.createElement("p");
+        cardContent.textContent = content;
+
+        card.appendChild(cardTitle);
+        card.appendChild(cardContent);
+        cardContainer.appendChild(card);
+      }
+
+      createCard("Card 1", "This is the content of card 1.");
+      createCard("Card 2", "This is the content of card 2.");
+      createCard("Card 2", "This is the content of card 2.");
+    </script>
+  </body>
+</html>
