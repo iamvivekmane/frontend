@@ -48,9 +48,15 @@
       });
 
       // It take milliseconds
-      setInterval(() => {
+      let a = setInterval(() => {
         document.querySelector(".childContainer").style.background = "red";
       }, 3000);
+      console.log(a);
+
+      let b = setTimeout(() => {
+        document.querySelector(".childContainer").style.background = "red";
+      }, 1000);
+      console.log(b);
     </script>
   </body>
 </html>
