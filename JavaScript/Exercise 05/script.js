@@ -1,42 +1,168 @@
-function createCard(title, channel, views, months_old, duration, thumbnail) {
-  let title_ = document.getElementById("title");
-  title_.innerText = title;
+function createCard(title, img, channel, views, months_old, duration) {
+        let cardContainer = document.getElementById("card-container");
 
-  let channel_ = document.getElementById("channel");
-  channel_.innerText = channel;
+        let container = document.createElement("div");
+        container.classList.add("container");
 
-  let views_ = document.getElementById("views");
-  views_.innerText = views;
+        let length = document.createElement("div");
+        length.classList.add("duration");
+        length.textContent = duration;
 
-  let months_old_ = document.getElementById("months_old");
-  months_old_.innerText = months_old;
+        let image = document.createElement("div");
+        image.classList.add("thumbnail");
+        let thumb = document.createElement("img");
+        thumb.src = img;
+        image.appendChild(thumb);
+        image.appendChild(length);
 
-  let duration_ = document.getElementById("duration");
-  duration_.innerText = duration;
+        let heading = document.createElement("span");
+        heading.classList.add("title");
+        heading.textContent = title;
 
-  let thumbnail_ = document.getElementById("thumbnail");
-  thumbnail_.src = thumbnail;
-}
+        let description = document.createElement("div");
+        description.classList.add("desc");
 
-createCard(
-  "hello and welcome to my  guys",
-  "anurag salgaonkar",
-  "200k",
-  "10 months old",
-  "13:88",
-  "https://i.ytimg.com/vi/eEeX2QMlSlo/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLCuGAwaBlMy3zRKWKe0jmZqLgVpBg"
-);
+        let list = document.createElement("ul");
+        description.appendChild(list);
 
-let div = document.createElement("div");
-div.className = "hello";
-div.innerHTML = "<span>hello</span>";
-document.body.append(div);
+        let Cname = document.createElement("li");
+        Cname.textContent = channel;
+        Cname.id = "chnl";
+        list.appendChild(Cname);
 
-createCard(
-  "hello and welcome to my  guys",
-  "anurag salgaonkar",
-  "200k",
-  "10 months old",
-  "13:88",
-  "https://i.ytimg.com/vi/eEeX2QMlSlo/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLCuGAwaBlMy3zRKWKe0jmZqLgVpBg"
-);
+        let watched = document.createElement("li");
+        if (views >= 1000000000) {
+          let converted = (views / 1000000000).toFixed(0) + "B";
+          watched.textContent = converted;
+        } else if (views >= 1000000) {
+          let converted = (views / 1000000).toFixed(0) + "M";
+          watched.textContent = converted;
+        } else if (views >= 1000) {
+          let converted = (views / 1000).toFixed(0) + "K";
+          watched.textContent = converted;
+        } else {
+          watched.textContent = views.toString();
+        }
+        list.appendChild(watched);
+
+        let months = document.createElement("li");
+        months.textContent = months_old;
+        list.appendChild(months);
+
+        container.appendChild(image);
+        container.appendChild(heading);
+        container.appendChild(description);
+        cardContainer.appendChild(container);
+      }
+      createCard(
+        "Shubh - Supreme (Official Music Video)",
+        "https://i.ytimg.com/vi/YDDjAE13oKw/hqdefault.jpg?sqp=-oaymwFACKgBEF5IWvKriqkDMwgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAHwAQH4Af4JgALQBYoCDAgAEAEYVCBlKFUwDw==&rs=AOn4CLAliae8Oe3YVOIgV-fLQ8kkUIquUA",
+        "SHUBH",
+        48153895,
+        "2 months ago",
+        "2:55"
+      );
+      createCard(
+        "Shubh - Supreme (Official Music Video)",
+        "https://i.ytimg.com/vi/YDDjAE13oKw/hqdefault.jpg?sqp=-oaymwFACKgBEF5IWvKriqkDMwgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAHwAQH4Af4JgALQBYoCDAgAEAEYVCBlKFUwDw==&rs=AOn4CLAliae8Oe3YVOIgV-fLQ8kkUIquUA",
+        "SHUBH",
+        48153895,
+        "2 months ago",
+        "2:55"
+      );
+      createCard(
+        "Shubh - Supreme (Official Music Video)",
+        "https://i.ytimg.com/vi/YDDjAE13oKw/hqdefault.jpg?sqp=-oaymwFACKgBEF5IWvKriqkDMwgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAHwAQH4Af4JgALQBYoCDAgAEAEYVCBlKFUwDw==&rs=AOn4CLAliae8Oe3YVOIgV-fLQ8kkUIquUA",
+        "SHUBH",
+        48153895,
+        "2 months ago",
+        "2:55"
+      );
+      createCard(
+        "Shubh - Supreme (Official Music Video)",
+        "https://i.ytimg.com/vi/YDDjAE13oKw/hqdefault.jpg?sqp=-oaymwFACKgBEF5IWvKriqkDMwgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAHwAQH4Af4JgALQBYoCDAgAEAEYVCBlKFUwDw==&rs=AOn4CLAliae8Oe3YVOIgV-fLQ8kkUIquUA",
+        "SHUBH",
+        48153895,
+        "2 months ago",
+        "2:55"
+      );
+      createCard(
+        "Shubh - Supreme (Official Music Video)",
+        "https://i.ytimg.com/vi/YDDjAE13oKw/hqdefault.jpg?sqp=-oaymwFACKgBEF5IWvKriqkDMwgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAHwAQH4Af4JgALQBYoCDAgAEAEYVCBlKFUwDw==&rs=AOn4CLAliae8Oe3YVOIgV-fLQ8kkUIquUA",
+        "SHUBH",
+        48153895,
+        "2 months ago",
+        "2:55"
+      );
+      createCard(
+        "Shubh - Supreme (Official Music Video)",
+        "https://i.ytimg.com/vi/YDDjAE13oKw/hqdefault.jpg?sqp=-oaymwFACKgBEF5IWvKriqkDMwgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAHwAQH4Af4JgALQBYoCDAgAEAEYVCBlKFUwDw==&rs=AOn4CLAliae8Oe3YVOIgV-fLQ8kkUIquUA",
+        "SHUBH",
+        48153895,
+        "2 months ago",
+        "2:55"
+      );
+      createCard(
+        "Shubh - Supreme (Official Music Video)",
+        "https://i.ytimg.com/vi/YDDjAE13oKw/hqdefault.jpg?sqp=-oaymwFACKgBEF5IWvKriqkDMwgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAHwAQH4Af4JgALQBYoCDAgAEAEYVCBlKFUwDw==&rs=AOn4CLAliae8Oe3YVOIgV-fLQ8kkUIquUA",
+        "SHUBH",
+        48153895,
+        "2 months ago",
+        "2:55"
+      );
+      createCard(
+        "Shubh - Supreme (Official Music Video)",
+        "https://i.ytimg.com/vi/YDDjAE13oKw/hqdefault.jpg?sqp=-oaymwFACKgBEF5IWvKriqkDMwgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAHwAQH4Af4JgALQBYoCDAgAEAEYVCBlKFUwDw==&rs=AOn4CLAliae8Oe3YVOIgV-fLQ8kkUIquUA",
+        "SHUBH",
+        48153895,
+        "2 months ago",
+        "2:55"
+      );
+      createCard(
+        "Shubh - Supreme (Official Music Video)",
+        "https://i.ytimg.com/vi/YDDjAE13oKw/hqdefault.jpg?sqp=-oaymwFACKgBEF5IWvKriqkDMwgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAHwAQH4Af4JgALQBYoCDAgAEAEYVCBlKFUwDw==&rs=AOn4CLAliae8Oe3YVOIgV-fLQ8kkUIquUA",
+        "SHUBH",
+        48153895,
+        "2 months ago",
+        "2:55"
+      );
+      createCard(
+        "Shubh - Supreme (Official Music Video)",
+        "https://i.ytimg.com/vi/YDDjAE13oKw/hqdefault.jpg?sqp=-oaymwFACKgBEF5IWvKriqkDMwgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAHwAQH4Af4JgALQBYoCDAgAEAEYVCBlKFUwDw==&rs=AOn4CLAliae8Oe3YVOIgV-fLQ8kkUIquUA",
+        "SHUBH",
+        48153895,
+        "2 months ago",
+        "2:55"
+      );
+      createCard(
+        "Shubh - Supreme (Official Music Video)",
+        "https://i.ytimg.com/vi/YDDjAE13oKw/hqdefault.jpg?sqp=-oaymwFACKgBEF5IWvKriqkDMwgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAHwAQH4Af4JgALQBYoCDAgAEAEYVCBlKFUwDw==&rs=AOn4CLAliae8Oe3YVOIgV-fLQ8kkUIquUA",
+        "SHUBH",
+        48153895,
+        "2 months ago",
+        "2:55"
+      );
+      createCard(
+        "Shubh - Supreme (Official Music Video)",
+        "https://i.ytimg.com/vi/YDDjAE13oKw/hqdefault.jpg?sqp=-oaymwFACKgBEF5IWvKriqkDMwgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAHwAQH4Af4JgALQBYoCDAgAEAEYVCBlKFUwDw==&rs=AOn4CLAliae8Oe3YVOIgV-fLQ8kkUIquUA",
+        "SHUBH",
+        48153895,
+        "2 months ago",
+        "2:55"
+      );
+      createCard(
+        "Shubh - Supreme (Official Music Video)",
+        "https://i.ytimg.com/vi/YDDjAE13oKw/hqdefault.jpg?sqp=-oaymwFACKgBEF5IWvKriqkDMwgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAHwAQH4Af4JgALQBYoCDAgAEAEYVCBlKFUwDw==&rs=AOn4CLAliae8Oe3YVOIgV-fLQ8kkUIquUA",
+        "SHUBH",
+        48153895,
+        "2 months ago",
+        "2:55"
+      );
+      createCard(
+        "Shubh - Supreme (Official Music Video)",
+        "https://i.ytimg.com/vi/YDDjAE13oKw/hqdefault.jpg?sqp=-oaymwFACKgBEF5IWvKriqkDMwgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAHwAQH4Af4JgALQBYoCDAgAEAEYVCBlKFUwDw==&rs=AOn4CLAliae8Oe3YVOIgV-fLQ8kkUIquUA",
+        "SHUBH",
+        48153895,
+        "2 months ago",
+        "2:55"
+      );
