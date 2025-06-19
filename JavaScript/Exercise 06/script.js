@@ -5,7 +5,6 @@ function init(a) {
   let firstelem = document.createElement("div");
   firstelem.classList.add("first", "lines");
   firstelem.textContent = a;
-
   let loaderelem = document.createElement("div");
   loaderelem.classList.add("loader");
   firstline.appendChild(firstelem);
@@ -104,7 +103,6 @@ function getData5() {
     }, random);
   });
 }
-
 async function main() {
   let First = await getData1();
   console.log(First);
