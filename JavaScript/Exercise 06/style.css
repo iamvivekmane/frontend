@@ -1,0 +1,28 @@
+body {
+  background-color: black;
+}
+.lines {
+  font-size: 50px;
+  border: 2px solid black;
+  width: length;
+  display: inline-block;
+  color: chartreuse;
+}
+
+.loader {
+  width: 50px;
+  margin: 0px;
+  aspect-ratio: 4;
+  background: radial-gradient(circle closest-side, #03f803 90%, #0000) 0 /
+    calc(100% / 3) 100% space;
+  clip-path: inset(0 100% 0 0);
+  animation: l1 1s steps(4) infinite;
+  display: inline-block;
+  top: 10;
+  border: 2px solid rgb(0, 0, 0);
+}
+@keyframes l1 {
+  to {
+    clip-path: inset(0 -34% 0 0);
+  }
+}
