@@ -1,11 +1,14 @@
-# Web Development Learning Repository
+# 🌟🎨 Frontend Development Learning Repository 🚀💻
 
-Welcome to the **Web Development Learning Repository**! This project is dedicated to learning and practicing web development from the ground up.
+Welcome to the **Frontend Development Learning Repository**!  
+This project is dedicated to building, practicing, and mastering frontend web development using core technologies: **HTML**, **CSS**, and **JavaScript**.
 
-## Project Structure
+---
 
-The repository is organized into the following directories:
+## 🧱 Tech Stack 💡
 
-- **HTML**: Contains foundational HTML files covering various topics and exercises.
-- **CSS**: Contains stylesheets and related resources to enhance the visual presentation of web pages.
-- **JavaScript**: Contains core concepts such as variables, functions, control flow, events, and DOM manipulation
+- 📝 **HTML5** – Structuring content with semantic markup
+- 🎨 **CSS3** – Styling pages using layout techniques like Flexbox & Grid, and adding animations
+- ⚙️ **JavaScript (ES6+)** – Adding interactivity, handling events, and manipulating the DOM
+
+---
