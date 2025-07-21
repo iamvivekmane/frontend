@@ -12,4 +12,7 @@ This project is dedicated to building, practicing, and mastering frontend web de
 - ⚙️ **JavaScript (ES6+)** – Adding interactivity, handling events, and manipulating the DOM
 - 🌬️ **Tailwind CSS** – A utility-first CSS framework for rapidly building modern and responsive UIs
 
+
+- Currently learning react
+
 ---
